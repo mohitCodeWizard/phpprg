@@ -19,12 +19,20 @@
 </head>
 
 <body>
+
+<?php
+$txtname = "";
+    if(isset($_GET['txtname'])){
+        $txtname = $_GET['txtname'];
+    }
+?>
+    <input type='text' size='30' name='txtsearch' onkeyup='showresult(this.value)' value="<?php echo $txtname;  ?>"><br><br>
+    <div id='disp_area'></div>
     <?php
 
-    echo "<input type='text' size = '30' name = 'txtsearch' onkeyup='showresult(this.value)'><br><br>";
-    echo "<div id='disp_area'></div>";
+
     $conn = mysqli_connect("localhost", "root", "", "student");
-    $response ="";
+    $response = "";
     if (isset($_GET['col'])) {
         $response .= "<table border = '2'>";
         $sql = "show columns from student  ";
