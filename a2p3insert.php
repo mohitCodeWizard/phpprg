@@ -32,6 +32,6 @@ if (isset($_GET['subbtn'])) {
     }
     $sql = "insert into student values('$name','$email','$pass','$phone','$gender','$result','$grade')";
     mysqli_query($conn, $sql);
-    header('location:a2p3disp.php');
+    header('location:a2p3login.php');
 }
 ?>
