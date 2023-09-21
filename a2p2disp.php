@@ -3,12 +3,6 @@
 
     echo "<table border = '1'><tr align= 'center'>";
 
-    //columns show
-    // $sql = "show columns from EMPLOYEE";
-    // $res = mysqli_query($conn,$sql);
-    // while ($col = mysqli_fetch_array($res)){
-    //     echo "<td><h3>".$col['Field']."</h3></td>";
-    // }
     echo "<td><h3>ID</h3></td><td><h3>Name</h3></td><td><h3>Gender</h3></td><td><h3>Hoddie</h3></td>";
     echo "</tr>";
     //show data
@@ -31,7 +25,7 @@
         if($row[5] == 1){
             $hobbie .= "painting,";
         }
-        if($row[3] == 1){
+        if($row[6] == 1){
             $hobbie .= "sport";
         }
         
