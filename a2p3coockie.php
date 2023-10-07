@@ -26,7 +26,7 @@
     if(isset($_GET['btnsub'])){
         $coockiename = "subject_" . $_GET['txtcoockie'];
         $coockievalue = $_GET['txtcoockie'];
-        setcookie($coockiename,$coockievalue);
+        setcookie($coockiename,$coockievalue, time() + 60*60);
     }
 ?>
 
